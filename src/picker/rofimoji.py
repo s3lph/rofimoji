@@ -329,6 +329,7 @@ class Rofimoji:
         )
 
     def process_chosen_characters(self, chosen_characters: List[str]) -> str:
+        print(chosen_characters)
         processed_characters = ''.join(
             self.add_skin_tone(re.match(r'^(?:\u200e(?! ))?(?P<char>.[^ ]*) .*', character).group('char'))
             for character in chosen_characters
